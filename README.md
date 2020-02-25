@@ -1,4 +1,4 @@
-### File extensions
+# tateShaders
 
 Upload your shaders in the **shaders/** directory.
 
