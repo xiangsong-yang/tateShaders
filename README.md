@@ -1,5 +1,7 @@
 ### File extensions
 
+Upload your shaders in the **shaders/** directory.
+
 ```
 Fragement shaders = *.frag  
 Vertex shaders = *.vert
