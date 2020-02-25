@@ -2,7 +2,7 @@
 
 ```
 Fragement shaders = *.frag  
-Vertex shaders = *.ver
+Vertex shaders = *.vert
 ```
 
 Add a screenshot if you have one!
