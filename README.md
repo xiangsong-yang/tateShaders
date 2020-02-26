@@ -1,6 +1,6 @@
 # tateShaders
 
-Upload your shaders in the **shaders/** directory.
+Upload your shaders to the **shaders/** directory.
 
 ```
 Fragement shaders = *.frag  
