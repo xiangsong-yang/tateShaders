@@ -8,17 +8,19 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update() {
-        if (ofGetFrameNum()%100 == 0) {
-            shader.unload();
-            ofLog() << i;
-            setShader();
-            
-            if (!shader.isLoaded()) {
-                i = 0;
-                setShader();
-            }
-            i++;
-        }
+    shader.load("3/shader");
+    
+//        if (ofGetFrameNum()%100 == 0) {
+//            shader.unload();
+//            ofLog() << i;
+//            setShader();
+//
+//            if (!shader.isLoaded()) {
+//                i = 0;
+//                setShader();
+//            }
+//            i++;
+//        }
 }
 
 //--------------------------------------------------------------

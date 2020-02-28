@@ -3,8 +3,8 @@
 Upload your shaders to the **shaders/** directory.
 
 ```
-Fragement shaders = *.frag  
-Vertex shaders = *.vert
+Fragement shaders = shader.frag  
+Vertex shaders = shader.vert
 ```
 
 Add a screenshot if you have one!
