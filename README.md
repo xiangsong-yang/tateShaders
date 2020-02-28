@@ -26,7 +26,7 @@ out vec4 outputColor;
 
 void main()
 { 
-    outputColor = vec4(col, 5);
+    outputColor = vec4(1., 1., 1., 5);
 }
 ```
 
