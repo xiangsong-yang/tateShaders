@@ -9,24 +9,16 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update() {
         if (ofGetFrameNum()%100 == 0) {
-            
             shader.unload();
-    
             ofLog() << i;
+            setShader();
             
-            string path = std::to_string(i) + "/shader";
-        
-            shader.load(path);
-            
-            if(!shader.isLoaded()) {
+            if (!shader.isLoaded()) {
                 i = 0;
-                path = std::to_string(i) + "/shader";
-                shader.load(path);
-            } else {
-                i++;
+                setShader();
             }
+            i++;
         }
-    
 }
 
 //--------------------------------------------------------------
@@ -85,6 +77,7 @@ void ofApp::dragEvent(ofDragInfo dragInfo){
 
 }
 
-//void setShader () {
-//    ofLog() << "bla";
-//}
+void ofApp::setShader () {
+    string path = std::to_string(i) + "/shader";
+    shader.load(path);
+}
