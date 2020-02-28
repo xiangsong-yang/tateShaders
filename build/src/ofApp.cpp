@@ -3,17 +3,30 @@
 //--------------------------------------------------------------
 
 void ofApp::setup(){
-
-    shader.load("shadersGL3/shader.vert", "shadersGL3/shader.frag");
+    ofSetFrameRate(24);
 }
 
 //--------------------------------------------------------------
-void ofApp::update(){
-
+void ofApp::update() {
+        if (ofGetFrameNum()%duration == 0) {
+            i++;
+            
+            string urlVert = "shadersGL3/" + std::to_string(i) + "/shader.vert";
+            string urlFrag = "shadersGL3/" + std::to_string(i) + "/shader.frag";
+            shader.load(urlVert, urlFrag);
+            
+            //ofLog() << i;
+            
+            if (i >= dirCount)  {
+                i = 0;
+            }
+        }
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+    
+    
     ofSetColor(120);
     shader.begin();
     shader.setUniform1f("time", ofGetElapsedTimef());

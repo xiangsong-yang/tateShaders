@@ -22,4 +22,8 @@ class ofApp : public ofBaseApp{
     ofEasyCam cam;
     ofShader shader;
     ofSpherePrimitive sphere;
+    
+    int i = 1; // iterator for for loop
+    int dirCount = 3; // number of directories containing shaders
+    int duration = 100; // frames
 };
