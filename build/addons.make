@@ -1,1 +1,3 @@
+ofxMidi
+ofxOsc
 ofxShader
