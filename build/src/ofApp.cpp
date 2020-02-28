@@ -77,6 +77,7 @@ void ofApp::dragEvent(ofDragInfo dragInfo){
 
 }
 
+//--------------------------------------------------------------
 void ofApp::setShader () {
     string path = std::to_string(i) + "/shader";
     shader.load(path);
