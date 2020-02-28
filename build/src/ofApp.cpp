@@ -8,25 +8,29 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update() {
-        if (ofGetFrameNum()%duration == 0) {
-            i++;
+        if (ofGetFrameNum()%100 == 0) {
             
-            string urlVert = "shadersGL3/" + std::to_string(i) + "/shader.vert";
-            string urlFrag = "shadersGL3/" + std::to_string(i) + "/shader.frag";
-            shader.load(urlVert, urlFrag);
+            shader.unload();
+    
+            ofLog() << i;
             
-            //ofLog() << i;
+            string path = std::to_string(i) + "/shader";
+        
+            shader.load(path);
             
-            if (i >= dirCount)  {
+            if(!shader.isLoaded()) {
                 i = 0;
+                path = std::to_string(i) + "/shader";
+                shader.load(path);
+            } else {
+                i++;
             }
         }
+    
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    
-    
     ofSetColor(120);
     shader.begin();
     shader.setUniform1f("time", ofGetElapsedTimef());
@@ -80,3 +84,7 @@ void ofApp::gotMessage(ofMessage msg){
 void ofApp::dragEvent(ofDragInfo dragInfo){
 
 }
+
+//void setShader () {
+//    ofLog() << "bla";
+//}

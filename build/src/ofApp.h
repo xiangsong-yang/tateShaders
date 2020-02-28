@@ -8,6 +8,7 @@ class ofApp : public ofBaseApp{
     void setup();
     void update();
     void draw();
+    void setShader();
     
     void keyPressed(int key);
     void keyReleased(int key);
@@ -23,7 +24,6 @@ class ofApp : public ofBaseApp{
     ofShader shader;
     ofSpherePrimitive sphere;
     
-    int i = 1; // iterator for for loop
+    int i = 0; // iterator for for loop
     int dirCount = 3; // number of directories containing shaders
-    int duration = 100; // frames
 };
